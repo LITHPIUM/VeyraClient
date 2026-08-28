@@ -1,6 +1,10 @@
 (() => {
   const config = window.VEYRA_CONFIG || {};
 
+  const scrollbarStyle = document.createElement('style');
+  scrollbarStyle.textContent = 'html{scrollbar-color:#e5393f #080808!important}::-webkit-scrollbar{width:10px;height:10px}::-webkit-scrollbar-track{background:#080808!important}::-webkit-scrollbar-thumb{background:#e5393f!important;border:3px solid #080808!important;border-radius:999px}::-webkit-scrollbar-thumb:hover{background:#ff4b52!important}::-webkit-scrollbar-corner{background:#080808!important}';
+  document.head.appendChild(scrollbarStyle);
+
   // Keep internal section navigation out of the URL. No #hash is added.
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', event => {
