@@ -1,10 +1,11 @@
 :root{--bg:#090909;--panel:#101010;--panel2:#141414;--text:#f2f0ec;--muted:#989692;--dim:#66635f;--line:rgba(255,255,255,.11);--red:#e5393f;--max:1160px}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--red) #090909}
-html::-webkit-scrollbar{width:10px;height:10px}
-html::-webkit-scrollbar-track{background:#090909}
-html::-webkit-scrollbar-thumb{background:var(--red);border:2px solid #090909;border-radius:999px}
-html::-webkit-scrollbar-thumb:hover{background:#f04a50}
+html,body{scrollbar-width:thin;scrollbar-color:var(--red) #090909}
+html::-webkit-scrollbar,body::-webkit-scrollbar{width:10px;height:10px}
+html::-webkit-scrollbar-track,body::-webkit-scrollbar-track{background:#090909}
+html::-webkit-scrollbar-thumb,body::-webkit-scrollbar-thumb{background:#e5393f;border:2px solid #090909;border-radius:999px}
+html::-webkit-scrollbar-thumb:hover,body::-webkit-scrollbar-thumb:hover{background:#ff4b52}
+html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font:14px/1.55 Inter,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}button{font:inherit}
 .header{height:64px;width:min(calc(100% - 48px),1240px);margin:auto;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
