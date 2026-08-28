@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#090909">
 <meta name="description" content="Veyra — a free Minecraft client built for performance and a polished experience.">
 <title>Veyra — Minecraft Client</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,9 +15,12 @@
 <header class="header">
   <a class="brand" href="#top" aria-label="Veyra home"><span class="brand-symbol">V</span><span>VEYRA</span></a>
   <nav class="nav" aria-label="Primary navigation">
-    <a href="#features">FEATURES</a><a href="#screenshots">SCREENSHOTS</a><a href="#media">MEDIA</a><a href="#download">DOWNLOAD</a>
+    <a href="#features">FEATURES</a>
+    <a href="#screenshots">SCREENSHOTS</a>
+    <a href="#media">MEDIA</a>
+    <a href="#download">DOWNLOAD</a>
   </nav>
-  <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+  <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
 </header>
 
 <main id="top">
@@ -24,50 +29,56 @@
     <p class="kicker">VEYRA / MINECRAFT CLIENT</p>
     <h1>THE MINECRAFT<br>CLIENT <i>BUILT DIFFERENT.</i></h1>
     <p class="lead">A lightweight Minecraft client built around performance, simplicity, and a polished experience.</p>
-    <div class="actions"><a class="button button-red" href="#download">DOWNLOAD FOR WINDOWS</a><a class="button button-dark" href="#features">VIEW FEATURES</a></div>
+    <div class="actions">
+      <a class="button button-red" data-download href="#download">DOWNLOAD FOR WINDOWS</a>
+      <a class="button button-dark" href="#features">VIEW FEATURES</a>
+    </div>
   </div>
   <div class="product-shot" aria-label="Veyra client preview">
-    <img src="assets/screenshots/client-main.webp" alt="Veyra Minecraft client" loading="eager" onerror="this.parentElement.classList.add('missing-image');this.remove()">
-    <div class="shot-fallback"><span>VEYRA</span><strong>CLIENT PREVIEW</strong><small>Add your Veyra screenshot at<br>assets/screenshots/client-main.webp</small></div>
+    <img src="assets/screenshots/client-main.webp" alt="Veyra Minecraft client" loading="eager">
   </div>
 </section>
 
-<section class="feature-strip section-wrap" id="features">
-  <article><span class="feature-icon">01</span><h2>HIGH PERFORMANCE</h2><p>Focused on keeping Minecraft responsive without unnecessary overhead.</p></article>
-  <article><span class="feature-icon">02</span><h2>BUILT-IN MODS</h2><p>Useful gameplay, performance, and quality-of-life features in one client.</p></article>
-  <article><span class="feature-icon">03</span><h2>POLISHED EXPERIENCE</h2><p>A clean interface that gives you control without getting in the way.</p></article>
+<section class="feature-strip section-wrap" id="features" aria-labelledby="features-title">
+  <div class="feature-intro"><p class="kicker">FEATURES</p><h2 id="features-title">MADE TO<br><i>STAY OUT OF THE WAY.</i></h2></div>
+  <article><span class="feature-icon">01</span><h3>HIGH PERFORMANCE</h3><p>Focused on keeping Minecraft responsive without unnecessary overhead.</p></article>
+  <article><span class="feature-icon">02</span><h3>BUILT-IN MODS</h3><p>Useful gameplay, performance, and quality-of-life features in one client.</p></article>
+  <article><span class="feature-icon">03</span><h3>POLISHED EXPERIENCE</h3><p>A clean interface that gives you control without getting in the way.</p></article>
 </section>
 
 <section class="split section-wrap">
-  <div><p class="kicker">PERFORMANCE</p><h2>BUILT FOR<br><i>PERFORMANCE.</i></h2><p>Veyra is designed to keep the client lean, responsive, and easy to maintain as it grows.</p></div>
-  <div class="media-frame"><img src="assets/screenshots/performance.webp" alt="Veyra performance interface" loading="lazy" onerror="this.parentElement.classList.add('missing-image');this.remove()"><div class="shot-fallback"><span>VEYRA</span><strong>PERFORMANCE</strong><small>Add assets/screenshots/performance.webp</small></div></div>
+  <div class="copy-block"><p class="kicker">PERFORMANCE</p><h2>BUILT FOR<br><i>PERFORMANCE.</i></h2><p>Veyra is designed around a lightweight, responsive client architecture that stays focused on the game.</p></div>
+  <div class="media-frame"><img src="assets/screenshots/performance.webp" alt="Veyra performance interface" loading="lazy"></div>
 </section>
 
 <section class="split split-reverse section-wrap">
-  <div class="media-frame"><img src="assets/screenshots/client-ui.webp" alt="Veyra client interface" loading="lazy" onerror="this.parentElement.classList.add('missing-image');this.remove()"><div class="shot-fallback"><span>VEYRA</span><strong>CLIENT UI</strong><small>Add assets/screenshots/client-ui.webp</small></div></div>
-  <div><p class="kicker">THE CLIENT</p><h2>EVERYTHING<br>IN <i>ONE PLACE.</i></h2><p>Launcher, client settings, built-in features, and cosmetics are designed as one consistent experience.</p></div>
+  <div class="media-frame"><img src="assets/screenshots/client-ui.webp" alt="Veyra client interface" loading="lazy"></div>
+  <div class="copy-block"><p class="kicker">THE CLIENT</p><h2>EVERYTHING<br>IN <i>ONE PLACE.</i></h2><p>Settings, built-in features, and cosmetics are designed as one consistent Veyra experience.</p></div>
 </section>
 
 <section class="screenshots section-wrap" id="screenshots">
   <div class="section-head"><p class="kicker">SCREENSHOTS</p><h2>TAKE A LOOK <i>INSIDE.</i></h2></div>
-  <div class="gallery">
+  <div class="gallery" aria-label="Veyra screenshots">
     <button class="gallery-button prev" type="button" aria-label="Previous screenshot">‹</button>
-    <div class="gallery-stage"><img class="gallery-image" src="assets/screenshots/client-main.webp" alt="Veyra client screenshot"><div class="gallery-fallback"><span>VEYRA</span><strong>SCREENSHOTS</strong><small>Add screenshots to assets/screenshots/</small></div></div>
+    <div class="gallery-stage"><img class="gallery-image" src="assets/screenshots/client-main.webp" alt="Veyra client screenshot" loading="lazy"></div>
     <button class="gallery-button next" type="button" aria-label="Next screenshot">›</button>
   </div>
-  <div class="dots" aria-label="Screenshot navigation"><button class="active" type="button" aria-label="Screenshot 1"></button><button type="button" aria-label="Screenshot 2"></button><button type="button" aria-label="Screenshot 3"></button></div>
+  <div class="dots" aria-label="Screenshot navigation"></div>
 </section>
 
 <section class="media section-wrap" id="media">
-  <div class="section-head"><p class="kicker">MEDIA</p><h2>SEE VEYRA <i>IN ACTION.</i></h2></div>
-  <div class="media-grid">
-    <a href="#screenshots" class="media-tile"><span>SCREENSHOTS</span><strong>THE CLIENT</strong><small>Explore the interface →</small></a>
-    <a href="#download" class="media-tile media-tile-red"><span>RELEASES</span><strong>DOWNLOAD</strong><small>Veyra is free. Always. →</small></a>
+  <div class="section-head"><p class="kicker">MEDIA</p><h2>VEYRA, <i>IN ACTION.</i></h2></div>
+  <div class="media-panel">
+    <div><span class="media-label">01 / SCREENSHOTS</span><strong>SEE THE CLIENT.</strong></div>
+    <a class="text-link" href="#screenshots">VIEW SCREENSHOTS <span>→</span></a>
   </div>
 </section>
 
 <section class="download-cta" id="download">
-  <div class="section-wrap cta-inner"><div><p class="kicker">FREE. NO PAYWALLS.</p><h2>UP YOUR <i>GAME.</i></h2></div><a class="button button-black" data-download href="#">DOWNLOAD FOR WINDOWS</a></div>
+  <div class="section-wrap cta-inner">
+    <div><p class="kicker">FREE. NO PAYWALLS.</p><h2>UP YOUR <i>GAME.</i></h2></div>
+    <a class="button button-black" data-download href="#">DOWNLOAD FOR WINDOWS</a>
+  </div>
 </section>
 </main>
 
@@ -76,5 +87,7 @@
   <nav aria-label="Footer navigation"><a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="#media">Media</a><a href="settings.html">Settings / Legal</a></nav>
   <small>© 2026 Lithodium</small>
 </footer>
-<script src="config.js"></script><script src="script.js"></script>
-</body></html>
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
