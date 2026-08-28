@@ -1,5 +1,37 @@
 (() => {
   const config = window.VEYRA_CONFIG || {};
+
+  // Keep internal section navigation out of the URL. No #hash is added.
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', event => {
+      const targetId = link.getAttribute('href').slice(1);
+      const target = document.getElementById(targetId);
+      if (!target) return;
+      event.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Add dedicated detail pages beside the long-form product sections.
+  const performanceCopy = document.querySelector('.split:not(.split-reverse) .copy-block');
+  const clientCopy = document.querySelector('.split-reverse .copy-block');
+
+  function addLearnMore(container, href) {
+    if (!container || container.querySelector('.learn-more')) return;
+    const link = document.createElement('a');
+    link.className = 'button button-dark learn-more';
+    link.href = href;
+    link.textContent = 'LEARN MORE';
+    container.appendChild(link);
+  }
+
+  addLearnMore(performanceCopy, 'performance.html');
+  addLearnMore(clientCopy, 'client.html');
+
+  const learnMoreStyle = document.createElement('style');
+  learnMoreStyle.textContent = '.learn-more{margin-top:18px;min-height:35px;padding:0 14px;font-size:9px}.learn-more:hover{border-color:var(--red);color:var(--red)}';
+  document.head.appendChild(learnMoreStyle);
+
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.nav');
 
